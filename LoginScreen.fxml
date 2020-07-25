@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View_Controller.LoginScreenController">
+   <children>
+      <HBox alignment="CENTER" maxHeight="200.0" prefHeight="135.0" prefWidth="805.0" AnchorPane.bottomAnchor="465.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label fx:id="desktopSchedulerLabel" alignment="TOP_CENTER" contentDisplay="CENTER" text="Desktop Scheduler">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <PasswordField fx:id="usernameTextField" alignment="CENTER" layoutX="348.0" layoutY="238.0" prefHeight="25.0" prefWidth="198.0" promptText="username" />
+      <PasswordField fx:id="passwordTextField" alignment="CENTER" layoutX="348.0" layoutY="311.0" prefWidth="200.0" promptText="password" />
+      <Button fx:id="enterButton" layoutX="377.0" layoutY="390.0" mnemonicParsing="false" onAction="#onActionEnterScheduler" text="Enter">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Label fx:id="usernameLabel" layoutX="206.0" layoutY="240.0" text="User Name">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="passwordLabel" layoutX="206.0" layoutY="313.0" text="Password">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Separator layoutY="135.0" prefHeight="3.0" prefWidth="805.0" />
+      <Separator layoutY="463.0" prefHeight="3.0" prefWidth="805.0" />
+      <Label fx:id="errorMsgLabel" layoutX="348.0" layoutY="353.0" text="Label" />
+      <HBox alignment="CENTER" layoutX="-1.0" layoutY="136.0" prefHeight="88.0" prefWidth="805.0">
+         <children>
+            <Label fx:id="loginLabel" text="Login">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

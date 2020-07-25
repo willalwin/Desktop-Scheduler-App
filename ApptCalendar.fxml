@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View_Controller.ApptCalendarController">
+   <children>
+      <VBox alignment="TOP_CENTER" prefHeight="600.0" prefWidth="800.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label text="Appointment Calendar">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <AnchorPane prefHeight="33.0" prefWidth="800.0">
+               <children>
+                  <Button layoutX="253.0" layoutY="4.0" mnemonicParsing="false" onAction="#onActionViewByMonth" prefHeight="25.0" prefWidth="115.0" text="View By Month">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="429.0" layoutY="4.0" mnemonicParsing="false" onAction="#onActionViewByWeek" prefWidth="115.0" text="View By Week">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <HBox alignment="CENTER" prefHeight="291.0" prefWidth="800.0" spacing="10.0">
+               <children>
+                  <Button fx:id="backButton" mnemonicParsing="false" onAction="#onActionBack" prefWidth="50.0" text="Back">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <TableView fx:id="calendarTableView" prefHeight="291.0" prefWidth="500.0">
+                    <columns>
+                      <TableColumn fx:id="apptDateField" prefWidth="125.0" text="Appt Date" />
+                      <TableColumn fx:id="apptTimeField" prefWidth="125.0" text="Appt Time" />
+                        <TableColumn fx:id="customerNameField" prefWidth="125.0" text="Customer ID" />
+                        <TableColumn fx:id="consultantField" prefWidth="125.0" text="Consultant ID" />
+                    </columns>
+                  </TableView>
+                  <Button fx:id="nextButton" mnemonicParsing="false" onAction="#onActionNext" prefWidth="50.0" text="Next">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <AnchorPane layoutX="10.0" layoutY="75.0" prefHeight="33.0" prefWidth="800.0">
+               <children>
+                  <Button fx:id="addApptButton" layoutX="164.0" layoutY="4.0" mnemonicParsing="false" onAction="#onActionAddAppt" prefWidth="55.0" text="Add">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="editApptButton" layoutX="245.0" layoutY="4.0" mnemonicParsing="false" onAction="#onActionEditAppt" prefWidth="55.0" text="Edit">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="deleteApptButton" layoutX="326.0" layoutY="4.0" mnemonicParsing="false" onAction="#onActionDeleteAppt" prefWidth="55.0" text="Delete">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="10.0" layoutY="439.0" prefHeight="33.0" prefWidth="800.0">
+               <children>
+                  <Button fx:id="customerTableviewButton" layoutX="485.0" layoutY="4.0" mnemonicParsing="false" onAction="#onActionChangeSceneToCustomerTableView" prefHeight="25.0" prefWidth="150.0" text="Customer Table View">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="logoutButton" layoutX="660.0" layoutY="4.0" mnemonicParsing="false" onAction="#onActionLogout" prefWidth="150.0" text="Logout">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="generateReportButton" layoutX="163.0" layoutY="4.0" mnemonicParsing="false" onAction="#onActionChangeSceneToReportTableView" text="Generate Report">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets right="20.0" />
+               </padding>
+            </AnchorPane>
+         </children>
+         <padding>
+            <Insets top="20.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>
